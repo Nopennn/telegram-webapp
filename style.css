@@ -30,15 +30,15 @@ body {
 .item {
     text-align: center;
     flex: 32%;
-    max-width: 32%;
+    max-width: 25%;
     padding: 0 4px;
 }
-@media screen and (max-width: 300px) {
-    .item {
-        flex: 49%;
-        max-width: 49%;
-    }
-}
+/*@media screen and (max-width: 100px) {*/
+/*    .item {*/
+/*        flex: 32%;*/
+/*        max-width: 32%;*/
+/*    }*/
+/*}*/
 
 .btn {
     display: inline-block;
