@@ -27,6 +27,7 @@ window.onload=function(){
             item = "1";
             tg.MainButton.show();
         }
+        btn1.style.visibility = "hidden"
     });
 
     btn2.addEventListener("click", function(){

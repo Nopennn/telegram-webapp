@@ -38,6 +38,16 @@ body {
 
     transition: background .2s linear;
 }
+.add-btn {
+    position: absolute;
+    top: 127px;
+    left: 90px;
+}
+.sub-btn {
+    position: absolute;
+    top: 127px;
+    left: 17px;
+}
 
 .btn:hover {
     background: lightgreen;
