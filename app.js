@@ -100,10 +100,12 @@ console.log(searchParams.get('sort')); // price_descending
 
 
 let usercard = document.getElementById("usercard");
+if (usercard == null) {
+    console.log("No usercard found")
+}
 
 let p = document.createElement("p");
 
-p.innerText = `Имя ${tg.initDataUnsafe.user.first_name}
-фамилия ${tg.initDataUnsafe.user.last_name} `;
+p.innerText = `Данные из ссылки: ${searchParams.get('sort')}`;
 
 usercard.appendChild(p);
