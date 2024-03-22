@@ -95,6 +95,9 @@ Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.sendData(item);
 });
 
+const searchParams = new URLSearchParams(window.location.search);
+console.log(searchParams.get('sort')); // price_descending
+
 
 let usercard = document.getElementById("usercard");
 
