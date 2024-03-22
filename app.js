@@ -84,6 +84,19 @@ window.onload=function(){
             tg.MainButton.show();
         }
     });
+
+
+
+    let usercard = document.getElementById("usercard");
+    if (usercard == null) {
+        console.log("No usercard found")
+    }
+
+    let p = document.createElement("p");
+
+    p.innerText = `Данные из ссылки: ${searchParams.get('sort')}`;
+
+    usercard.appendChild(p);
 }
 
 
@@ -99,13 +112,3 @@ const searchParams = new URLSearchParams(window.location.search);
 console.log(searchParams.get('sort')); // price_descending
 
 
-let usercard = document.getElementById("usercard");
-if (usercard == null) {
-    console.log("No usercard found")
-}
-
-let p = document.createElement("p");
-
-p.innerText = `Данные из ссылки: ${searchParams.get('sort')}`;
-
-usercard.appendChild(p);
