@@ -8,12 +8,19 @@ tg.MainButton.color = '#2cab37';
 let item = "";
 
 window.onload=function(){
+    let item1 = 0;
+    let item2 = 0;
+    let item3 = 0;
     let btn1 = document.getElementById("btn1");
     let btn2 = document.getElementById("btn2");
     let btn3 = document.getElementById("btn3");
     let btn4 = document.getElementById("btn4");
     let btn5 = document.getElementById("btn5");
     let btn6 = document.getElementById("btn6");
+    let add1 = document.getElementById("add1");
+    let add2 = document.getElementById("add2");
+    let add3 = document.getElementById("add3");
+    let btnsubmit = document.getElementById("btnsubmit");
     if (btn1 == null) {
         console.log("We have a problem")
     }
@@ -84,6 +91,43 @@ window.onload=function(){
             tg.MainButton.show();
         }
     });
+
+    add1.addEventListener("click", function(){
+        item1++;
+        tg.MainButton.setText("Вы добавили товар 1!");
+        tg.MainButton.show();
+    });
+
+    add2.addEventListener("click", function(){
+        item2++;
+        tg.MainButton.setText("Вы добавили товар 2!");
+        tg.MainButton.show();
+    });
+
+    add3.addEventListener("click", function(){
+        item3++;
+        tg.MainButton.setText("Вы добавили товар 3!");
+        tg.MainButton.show();
+    });
+
+    btnsubmit.addEventListener("click", function(){
+        // let url = `https://chatter.salebot.pro/api/6554424364:AAG-4y8RpccZR71K8KAb_z0GCoFmUEVr94U/message?message=first ${item1} second ${item2} third ${item3}`
+        let url = `https://chatter.salebot.pro/api/6554424364:AAG-4y8RpccZR71K8KAb_z0GCoFmUEVr94U/message?message=blaaaaaahh&client_id=315620370`
+        tg.MainButton.setText("Отправка в бота.....");
+        tg.MainButton.show();
+        fetch(url).then(function(response) {
+            console.log(response)
+            tg.MainButton.setText("Готово!");
+            tg.MainButton.show();
+            return response.json();
+        }).then(function(data) {
+            console.log(data);
+        }).catch(function(err) {
+            console.log('Fetch Error :-S', err);
+        });
+    });
+
+
 
 
 
