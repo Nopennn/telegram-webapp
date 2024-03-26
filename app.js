@@ -94,7 +94,7 @@ window.onload=function(){
 
     let p = document.createElement("p");
 
-    p.innerText = `Данные из ссылки: ${searchParams.get('sort')}`;
+    p.innerText = `Ваше имя: ${searchParams.get('name')}\nВаш номер: ${searchParams.get('phone')}`;
 
     usercard.appendChild(p);
 }
