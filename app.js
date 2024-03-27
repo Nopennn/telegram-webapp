@@ -112,7 +112,9 @@ window.onload=function(){
 
     btnsubmit.addEventListener("click", function(){
         // let url = `https://chatter.salebot.pro/api/6554424364:AAG-4y8RpccZR71K8KAb_z0GCoFmUEVr94U/message?message=first ${item1} second ${item2} third ${item3}`
-        let url = `https://chatter.salebot.pro/api/6554424364:AAG-4y8RpccZR71K8KAb_z0GCoFmUEVr94U/message?message=blaaaaaahh&client_id=315620370`
+        let clientId = searchParams.get('id')
+        let message = `Первый товар: ${item1} штук\nВторой товар: ${item2} штук\nТретий товар: ${item3} штук\n`
+        let url = `https://chatter.salebot.pro/api/8dd2462fba9fe8d37202a4f99c16a577/message?message=${message}&client_id=${clientId}`
         tg.MainButton.setText("Отправка в бота.....");
         tg.MainButton.show();
         fetch(url).then(function(response) {
