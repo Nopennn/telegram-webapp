@@ -53,15 +53,45 @@ body {
 
     transition: background .2s linear;
 }
+.adjust-buttons {
+
+}
+.layered {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.layered > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+/* or for inline elements */
+.inline-layered {
+    display: inline-grid;
+}
+
+.inline-layered > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
 .add-btn {
-    position: absolute;
-    top: 127px;
-    left: 90px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.init-btn {
+    z-index: 100;
 }
 .sub-btn {
-    position: absolute;
-    top: 127px;
-    left: 17px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#item1_amount {
+    font-size: larger;
+    float: none; display:inline; width: 40%;
 }
 
 .btn:hover {
