@@ -8,18 +8,29 @@ tg.MainButton.color = '#2cab37';
 let item = "";
 
 window.onload=function(){
-    let item1 = 0;
-    let item2 = 0;
-    let item3 = 0;
+    let item1, item2, item3, item4, item5, item6;
+    item1 = item2 = item3 = item4 = item5 = item6 = 0
+
     let btn1 = document.getElementById("btn1");
     let btn2 = document.getElementById("btn2");
     let btn3 = document.getElementById("btn3");
     let btn4 = document.getElementById("btn4");
     let btn5 = document.getElementById("btn5");
     let btn6 = document.getElementById("btn6");
-    let add1 = document.getElementById("add1");
-    let add2 = document.getElementById("add2");
-    let add3 = document.getElementById("add3");
+
+    let add1 = document.getElementById("add-btn1");
+    let add2 = document.getElementById("add-btn2");
+    let add3 = document.getElementById("add-btn3");
+    let add4 = document.getElementById("add-btn4");
+    let add5 = document.getElementById("add-btn5");
+    let add6 = document.getElementById("add-btn6");
+
+    let sub1 = document.getElementById("sub-btn1");
+    let sub2 = document.getElementById("sub-btn2");
+    let sub3 = document.getElementById("sub-btn3");
+    let sub4 = document.getElementById("sub-btn4");
+    let sub5 = document.getElementById("sub-btn5");
+    let sub6 = document.getElementById("sub-btn6");
     let btnsubmit = document.getElementById("btnsubmit");
     if (btn1 == null) {
         console.log("We have a problem")
@@ -31,7 +42,7 @@ window.onload=function(){
         }
         else {
             tg.MainButton.setText("Вы выбрали товар 1!");
-            item = "1";
+            item1 = 1;
             tg.MainButton.show();
         }
         btn1.style.visibility = "hidden"
@@ -43,9 +54,10 @@ window.onload=function(){
         }
         else {
             tg.MainButton.setText("Вы выбрали товар 2!");
-            item = "2";
+            item2 = 1;
             tg.MainButton.show();
         }
+        btn2.style.visibility = "hidden"
     });
 
     btn3.addEventListener("click", function(){
@@ -54,9 +66,10 @@ window.onload=function(){
         }
         else {
             tg.MainButton.setText("Вы выбрали товар 3!");
-            item = "3";
+            item3 = 1;
             tg.MainButton.show();
         }
+        btn3.style.visibility = "hidden"
     });
 
     btn4.addEventListener("click", function(){
@@ -65,9 +78,10 @@ window.onload=function(){
         }
         else {
             tg.MainButton.setText("Вы выбрали товар 4!");
-            item = "4";
+            item4 = 1;
             tg.MainButton.show();
         }
+        btn4.style.visibility = "hidden"
     });
 
     btn5.addEventListener("click", function(){
@@ -76,9 +90,10 @@ window.onload=function(){
         }
         else {
             tg.MainButton.setText("Вы выбрали товар 5!");
-            item = "5";
+            item5 = 1;
             tg.MainButton.show();
         }
+        btn5.style.visibility = "hidden"
     });
 
     btn6.addEventListener("click", function(){
@@ -87,9 +102,10 @@ window.onload=function(){
         }
         else {
             tg.MainButton.setText("Вы выбрали товар 6!");
-            item = "6";
+            item6 = 1;
             tg.MainButton.show();
         }
+        btn6.style.visibility = "hidden"
     });
 
     add1.addEventListener("click", function(){
@@ -107,6 +123,60 @@ window.onload=function(){
     add3.addEventListener("click", function(){
         item3++;
         tg.MainButton.setText("Вы добавили товар 3!");
+        tg.MainButton.show();
+    });
+
+    add4.addEventListener("click", function(){
+        item4++;
+        tg.MainButton.setText("Вы добавили товар 4!");
+        tg.MainButton.show();
+    });
+
+    add5.addEventListener("click", function(){
+        item5++;
+        tg.MainButton.setText("Вы добавили товар 5!");
+        tg.MainButton.show();
+    });
+
+    add6.addEventListener("click", function(){
+        item6++;
+        tg.MainButton.setText("Вы добавили товар 6!");
+        tg.MainButton.show();
+    });
+
+    sub1.addEventListener("click", function(){
+        item1--;
+        tg.MainButton.setText("Вы добавили товар 1!");
+        tg.MainButton.show();
+    });
+
+    sub2.addEventListener("click", function(){
+        item2--;
+        tg.MainButton.setText("Вы добавили товар 1!");
+        tg.MainButton.show();
+    });
+
+    sub3.addEventListener("click", function(){
+        item3--;
+        tg.MainButton.setText("Вы добавили товар 1!");
+        tg.MainButton.show();
+    });
+
+    sub4.addEventListener("click", function(){
+        item4--;
+        tg.MainButton.setText("Вы добавили товар 1!");
+        tg.MainButton.show();
+    });
+
+    sub5.addEventListener("click", function(){
+        item5--;
+        tg.MainButton.setText("Вы добавили товар 1!");
+        tg.MainButton.show();
+    });
+
+    sub6.addEventListener("click", function(){
+        item6--;
+        tg.MainButton.setText("Вы добавили товар 1!");
         tg.MainButton.show();
     });
 

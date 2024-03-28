@@ -78,16 +78,16 @@ body {
 }
 .add-btn {
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 }
 .init-btn {
     z-index: 100;
 }
 .sub-btn {
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 }
 #item1_amount {
     font-size: larger;
