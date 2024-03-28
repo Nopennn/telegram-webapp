@@ -5,11 +5,25 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
-let item = "";
+
+
+
 
 window.onload=function(){
     let item1, item2, item3, item4, item5, item6;
     item1 = item2 = item3 = item4 = item5 = item6 = 0
+    let item1Amount = document.getElementById("item1_amount")
+    let item2Amount = document.getElementById("item2_amount")
+    let item3Amount = document.getElementById("item3_amount")
+    let item4Amount = document.getElementById("item4_amount")
+    let item5Amount = document.getElementById("item5_amount")
+    let item6Amount = document.getElementById("item6_amount")
+    item1Amount.innerText = `${item1}`;
+    item2Amount.innerText = `${item2}`;
+    item3Amount.innerText = `${item3}`;
+    item4Amount.innerText = `${item4}`;
+    item5Amount.innerText = `${item5}`;
+    item6Amount.innerText = `${item6}`;
 
     let btn1 = document.getElementById("btn1");
     let btn2 = document.getElementById("btn2");
@@ -43,6 +57,7 @@ window.onload=function(){
         else {
             tg.MainButton.setText("Вы выбрали товар 1!");
             item1 = 1;
+            item1Amount.innerText = `${item1}`;
             tg.MainButton.show();
         }
         btn1.style.visibility = "hidden"
@@ -55,6 +70,7 @@ window.onload=function(){
         else {
             tg.MainButton.setText("Вы выбрали товар 2!");
             item2 = 1;
+            item2Amount.innerText = `${item2}`;
             tg.MainButton.show();
         }
         btn2.style.visibility = "hidden"
@@ -67,6 +83,7 @@ window.onload=function(){
         else {
             tg.MainButton.setText("Вы выбрали товар 3!");
             item3 = 1;
+            item3Amount.innerText = `${item3}`;
             tg.MainButton.show();
         }
         btn3.style.visibility = "hidden"
@@ -79,6 +96,7 @@ window.onload=function(){
         else {
             tg.MainButton.setText("Вы выбрали товар 4!");
             item4 = 1;
+            item4Amount.innerText = `${item4}`;
             tg.MainButton.show();
         }
         btn4.style.visibility = "hidden"
@@ -91,6 +109,7 @@ window.onload=function(){
         else {
             tg.MainButton.setText("Вы выбрали товар 5!");
             item5 = 1;
+            item5Amount.innerText = `${item5}`;
             tg.MainButton.show();
         }
         btn5.style.visibility = "hidden"
@@ -103,6 +122,7 @@ window.onload=function(){
         else {
             tg.MainButton.setText("Вы выбрали товар 6!");
             item6 = 1;
+            item6Amount.innerText = `${item6}`;
             tg.MainButton.show();
         }
         btn6.style.visibility = "hidden"
@@ -110,73 +130,85 @@ window.onload=function(){
 
     add1.addEventListener("click", function(){
         item1++;
+        item1Amount.innerText = `${item1}`;
         tg.MainButton.setText("Вы добавили товар 1!");
         tg.MainButton.show();
     });
 
     add2.addEventListener("click", function(){
         item2++;
+        item2Amount.innerText = `${item2}`;
         tg.MainButton.setText("Вы добавили товар 2!");
         tg.MainButton.show();
     });
 
     add3.addEventListener("click", function(){
         item3++;
+        item3Amount.innerText = `${item3}`;
         tg.MainButton.setText("Вы добавили товар 3!");
         tg.MainButton.show();
     });
 
     add4.addEventListener("click", function(){
         item4++;
+        item4Amount.innerText = `${item4}`;
         tg.MainButton.setText("Вы добавили товар 4!");
         tg.MainButton.show();
     });
 
     add5.addEventListener("click", function(){
         item5++;
+        item5Amount.innerText = `${item5}`;
         tg.MainButton.setText("Вы добавили товар 5!");
         tg.MainButton.show();
     });
 
     add6.addEventListener("click", function(){
         item6++;
+        item6Amount.innerText = `${item6}`;
         tg.MainButton.setText("Вы добавили товар 6!");
         tg.MainButton.show();
     });
 
     sub1.addEventListener("click", function(){
         item1--;
-        tg.MainButton.setText("Вы добавили товар 1!");
+        item1Amount.innerText = `${item1}`;
+        tg.MainButton.setText("Вы убрали товар 1!");
         tg.MainButton.show();
     });
 
     sub2.addEventListener("click", function(){
         item2--;
-        tg.MainButton.setText("Вы добавили товар 1!");
+        item2Amount.innerText = `${item2}`;
+        tg.MainButton.setText("Вы убрали товар 2!");
         tg.MainButton.show();
     });
 
     sub3.addEventListener("click", function(){
         item3--;
-        tg.MainButton.setText("Вы добавили товар 1!");
+        item3Amount.innerText = `${item3}`;
+        tg.MainButton.setText("Вы убрали товар 3!");
         tg.MainButton.show();
     });
 
     sub4.addEventListener("click", function(){
         item4--;
-        tg.MainButton.setText("Вы добавили товар 1!");
+        item4Amount.innerText = `${item4}`;
+        tg.MainButton.setText("Вы убрали товар 4!");
         tg.MainButton.show();
     });
 
     sub5.addEventListener("click", function(){
         item5--;
-        tg.MainButton.setText("Вы добавили товар 1!");
+        item5Amount.innerText = `${item5}`;
+        tg.MainButton.setText("Вы убрали товар 5!");
         tg.MainButton.show();
     });
 
     sub6.addEventListener("click", function(){
         item6--;
-        tg.MainButton.setText("Вы добавили товар 1!");
+        item6Amount.innerText = `${item6}`;
+        tg.MainButton.setText("Вы убрали товар 6!");
         tg.MainButton.show();
     });
 
@@ -199,9 +231,8 @@ window.onload=function(){
         });
     });
 
-    let item1Amount = document.getElementById("item1_amount")
 
-    item1Amount.innerText = `${item1}`;
+
 
 
 

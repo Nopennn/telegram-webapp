@@ -89,7 +89,7 @@ body {
     top: 0;
     left: 0;
 }
-#item1_amount {
+.amount-indicator {
     font-size: larger;
     float: none; display:inline; width: 40%;
 }
