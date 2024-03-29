@@ -51,80 +51,51 @@ window.onload=function(){
     }
     btn1.addEventListener("click", function(){
         console.log("Click1")
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-        else {
-            tg.MainButton.setText("Вы выбрали товар 1!");
-            item1 = 1;
-            item1Amount.innerText = `${item1}`;
-            tg.MainButton.show();
-        }
+
+        tg.MainButton.setText("Вы выбрали товар 1!");
+        item1 = 1;
+        item1Amount.innerText = `${item1}`;
+        tg.MainButton.show();
         btn1.style.visibility = "hidden"
     });
 
     btn2.addEventListener("click", function(){
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-        else {
-            tg.MainButton.setText("Вы выбрали товар 2!");
-            item2 = 1;
-            item2Amount.innerText = `${item2}`;
-            tg.MainButton.show();
-        }
+        tg.MainButton.setText("Вы выбрали товар 2!");
+        item2 = 1;
+        item2Amount.innerText = `${item2}`;
+        tg.MainButton.show();
         btn2.style.visibility = "hidden"
     });
 
     btn3.addEventListener("click", function(){
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-        else {
-            tg.MainButton.setText("Вы выбрали товар 3!");
-            item3 = 1;
-            item3Amount.innerText = `${item3}`;
-            tg.MainButton.show();
-        }
+        tg.MainButton.setText("Вы выбрали товар 3!");
+        item3 = 1;
+        item3Amount.innerText = `${item3}`;
+        tg.MainButton.show();
         btn3.style.visibility = "hidden"
     });
 
     btn4.addEventListener("click", function(){
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-        else {
-            tg.MainButton.setText("Вы выбрали товар 4!");
-            item4 = 1;
-            item4Amount.innerText = `${item4}`;
-            tg.MainButton.show();
-        }
+        tg.MainButton.setText("Вы выбрали товар 4!");
+        item4 = 1;
+        item4Amount.innerText = `${item4}`;
+        tg.MainButton.show();
         btn4.style.visibility = "hidden"
     });
 
     btn5.addEventListener("click", function(){
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-        else {
-            tg.MainButton.setText("Вы выбрали товар 5!");
-            item5 = 1;
-            item5Amount.innerText = `${item5}`;
-            tg.MainButton.show();
-        }
+        tg.MainButton.setText("Вы выбрали товар 5!");
+        item5 = 1;
+        item5Amount.innerText = `${item5}`;
+        tg.MainButton.show();
         btn5.style.visibility = "hidden"
     });
 
     btn6.addEventListener("click", function(){
-        if (tg.MainButton.isVisible) {
-            tg.MainButton.hide();
-        }
-        else {
-            tg.MainButton.setText("Вы выбрали товар 6!");
-            item6 = 1;
-            item6Amount.innerText = `${item6}`;
-            tg.MainButton.show();
-        }
+        tg.MainButton.setText("Вы выбрали товар 6!");
+        item6 = 1;
+        item6Amount.innerText = `${item6}`;
+        tg.MainButton.show();
         btn6.style.visibility = "hidden"
     });
 
@@ -171,42 +142,72 @@ window.onload=function(){
     });
 
     sub1.addEventListener("click", function(){
-        item1--;
+        if (item1 > 0) {
+            item1--;
+        }
+        if (item1 == 0) {
+            btn1.style.visibility = "visible"
+        }
         item1Amount.innerText = `${item1}`;
         tg.MainButton.setText("Вы убрали товар 1!");
         tg.MainButton.show();
     });
 
     sub2.addEventListener("click", function(){
-        item2--;
+        if (item2 > 0) {
+            item2--;
+        }
+        if (item2 == 0) {
+            btn2.style.visibility = "visible"
+        }
         item2Amount.innerText = `${item2}`;
         tg.MainButton.setText("Вы убрали товар 2!");
         tg.MainButton.show();
     });
 
     sub3.addEventListener("click", function(){
-        item3--;
+        if (item3 > 0) {
+            item3--;
+        }
+        if (item3 == 0) {
+            btn3.style.visibility = "visible"
+        }
         item3Amount.innerText = `${item3}`;
         tg.MainButton.setText("Вы убрали товар 3!");
         tg.MainButton.show();
     });
 
     sub4.addEventListener("click", function(){
-        item4--;
+        if (item4 > 0) {
+            item4--;
+        }
+        if (item4 == 0) {
+            btn4.style.visibility = "visible"
+        }
         item4Amount.innerText = `${item4}`;
         tg.MainButton.setText("Вы убрали товар 4!");
         tg.MainButton.show();
     });
 
     sub5.addEventListener("click", function(){
-        item5--;
+        if (item5 > 0) {
+            item5--;
+        }
+        if (item5 == 0) {
+            btn5.style.visibility = "visible"
+        }
         item5Amount.innerText = `${item5}`;
         tg.MainButton.setText("Вы убрали товар 5!");
         tg.MainButton.show();
     });
 
     sub6.addEventListener("click", function(){
-        item6--;
+        if (item6 > 0) {
+            item6--;
+        }
+        if (item6 == 0) {
+            btn6.style.visibility = "visible"
+        }
         item6Amount.innerText = `${item6}`;
         tg.MainButton.setText("Вы убрали товар 6!");
         tg.MainButton.show();
