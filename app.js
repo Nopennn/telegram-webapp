@@ -1,4 +1,3 @@
-import * as sc from "./shopping_cart";
 
 let tg = window.Telegram.WebApp;
 
