@@ -1,3 +1,5 @@
+import * as sc from "./shopping_cart";
+
 let tg = window.Telegram.WebApp;
 
 tg.expand();
@@ -49,10 +51,8 @@ window.onload=function(){
     if (btn1 == null) {
         console.log("We have a problem")
     }
+    tg.MainButton.setText("Корзина");
     btn1.addEventListener("click", function(){
-        console.log("Click1")
-
-        tg.MainButton.setText("Вы выбрали товар 1!");
         item1 = 1;
         item1Amount.innerText = `${item1}`;
         tg.MainButton.show();
@@ -60,7 +60,6 @@ window.onload=function(){
     });
 
     btn2.addEventListener("click", function(){
-        tg.MainButton.setText("Вы выбрали товар 2!");
         item2 = 1;
         item2Amount.innerText = `${item2}`;
         tg.MainButton.show();
@@ -68,7 +67,6 @@ window.onload=function(){
     });
 
     btn3.addEventListener("click", function(){
-        tg.MainButton.setText("Вы выбрали товар 3!");
         item3 = 1;
         item3Amount.innerText = `${item3}`;
         tg.MainButton.show();
@@ -76,7 +74,6 @@ window.onload=function(){
     });
 
     btn4.addEventListener("click", function(){
-        tg.MainButton.setText("Вы выбрали товар 4!");
         item4 = 1;
         item4Amount.innerText = `${item4}`;
         tg.MainButton.show();
@@ -84,7 +81,6 @@ window.onload=function(){
     });
 
     btn5.addEventListener("click", function(){
-        tg.MainButton.setText("Вы выбрали товар 5!");
         item5 = 1;
         item5Amount.innerText = `${item5}`;
         tg.MainButton.show();
@@ -92,7 +88,6 @@ window.onload=function(){
     });
 
     btn6.addEventListener("click", function(){
-        tg.MainButton.setText("Вы выбрали товар 6!");
         item6 = 1;
         item6Amount.innerText = `${item6}`;
         tg.MainButton.show();
@@ -102,42 +97,36 @@ window.onload=function(){
     add1.addEventListener("click", function(){
         item1++;
         item1Amount.innerText = `${item1}`;
-        tg.MainButton.setText("Вы добавили товар 1!");
         tg.MainButton.show();
     });
 
     add2.addEventListener("click", function(){
         item2++;
         item2Amount.innerText = `${item2}`;
-        tg.MainButton.setText("Вы добавили товар 2!");
         tg.MainButton.show();
     });
 
     add3.addEventListener("click", function(){
         item3++;
         item3Amount.innerText = `${item3}`;
-        tg.MainButton.setText("Вы добавили товар 3!");
         tg.MainButton.show();
     });
 
     add4.addEventListener("click", function(){
         item4++;
         item4Amount.innerText = `${item4}`;
-        tg.MainButton.setText("Вы добавили товар 4!");
         tg.MainButton.show();
     });
 
     add5.addEventListener("click", function(){
         item5++;
         item5Amount.innerText = `${item5}`;
-        tg.MainButton.setText("Вы добавили товар 5!");
         tg.MainButton.show();
     });
 
     add6.addEventListener("click", function(){
         item6++;
         item6Amount.innerText = `${item6}`;
-        tg.MainButton.setText("Вы добавили товар 6!");
         tg.MainButton.show();
     });
 
@@ -149,7 +138,6 @@ window.onload=function(){
             btn1.style.visibility = "visible"
         }
         item1Amount.innerText = `${item1}`;
-        tg.MainButton.setText("Вы убрали товар 1!");
         tg.MainButton.show();
     });
 
@@ -161,7 +149,6 @@ window.onload=function(){
             btn2.style.visibility = "visible"
         }
         item2Amount.innerText = `${item2}`;
-        tg.MainButton.setText("Вы убрали товар 2!");
         tg.MainButton.show();
     });
 
@@ -173,7 +160,6 @@ window.onload=function(){
             btn3.style.visibility = "visible"
         }
         item3Amount.innerText = `${item3}`;
-        tg.MainButton.setText("Вы убрали товар 3!");
         tg.MainButton.show();
     });
 
@@ -185,7 +171,6 @@ window.onload=function(){
             btn4.style.visibility = "visible"
         }
         item4Amount.innerText = `${item4}`;
-        tg.MainButton.setText("Вы убрали товар 4!");
         tg.MainButton.show();
     });
 
@@ -197,7 +182,6 @@ window.onload=function(){
             btn5.style.visibility = "visible"
         }
         item5Amount.innerText = `${item5}`;
-        tg.MainButton.setText("Вы убрали товар 5!");
         tg.MainButton.show();
     });
 
@@ -209,9 +193,19 @@ window.onload=function(){
             btn6.style.visibility = "visible"
         }
         item6Amount.innerText = `${item6}`;
-        tg.MainButton.setText("Вы убрали товар 6!");
         tg.MainButton.show();
     });
+
+    tg.MainButton.onclick(()=> {
+        btn1.style.visibility = "hidden"
+        btn2.style.visibility = "hidden"
+        btn3.style.visibility = "hidden"
+        btn4.style.visibility = "hidden"
+        btn5.style.visibility = "hidden"
+        btn6.style.visibility = "hidden"
+        add1.style.visibility = "hidden"
+        sub1.style.visibility = "hidden"
+    })
 
     btnsubmit.addEventListener("click", function(){
         // let url = `https://chatter.salebot.pro/api/6554424364:AAG-4y8RpccZR71K8KAb_z0GCoFmUEVr94U/message?message=first ${item1} second ${item2} third ${item3}`
