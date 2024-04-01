@@ -9,8 +9,24 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <div class="container" id="shop">
-        <div class="inner">
+    <div class="container layered" >
+        <div class="inner" id="shopping-cart" style="visibility: hidden">
+            <div class="item" id="cart-container" style="position: relative;">
+                Товар 1: 159 *
+                <div class="amount-indicator" id="cart_item1_amount"></div>
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+        </div>
+        <div class="inner" id="shop">
             <div class="item" id="container" style="position: relative;">
                 <img src="img/burger.png" alt="" class="img">
                 <div class="adjust-buttons layered">
@@ -79,23 +95,8 @@
             </div>
         </div>
     </div>
-    <div class="container" id="shopping-cart" style="visibility: hidden">
-        <div class="inner">
-            <div class="item" id="cart-container" style="position: relative;">
-                Товар 1: 159 *
-                <div class="amount-indicator" id="cart_item1_amount"></div>
-            </div>
-            <div class="item">
-            </div>
-            <div class="item">
-            </div>
-            <div class="item">
-            </div>
-            <div class="item">
-            </div>
-            <div class="item">
-            </div>
-        </div>
+    <div class="container" >
+
     </div>
     <div class="usercard" id="usercard"></div>
 
