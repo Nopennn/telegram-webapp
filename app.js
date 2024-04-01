@@ -195,7 +195,7 @@ window.onload=function(){
         tg.MainButton.show();
     });
 
-    tg.MainButton.onclick(()=> {
+    Telegram.WebApp.onEvent("mainButtonClicked", function () {
         btn1.style.visibility = "hidden"
         btn2.style.visibility = "hidden"
         btn3.style.visibility = "hidden"
