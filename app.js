@@ -13,6 +13,8 @@ tg.MainButton.color = '#2cab37';
 window.onload=function(){
     let item1, item2, item3, item4, item5, item6;
     item1 = item2 = item3 = item4 = item5 = item6 = 0
+    let shop = document.getElementById("shop")
+    let shoppingCart = document.getElementById("shopping-cart")
     let item1Amount = document.getElementById("item1_amount")
     let item2Amount = document.getElementById("item2_amount")
     let item3Amount = document.getElementById("item3_amount")
@@ -196,14 +198,8 @@ window.onload=function(){
     });
 
     Telegram.WebApp.onEvent("mainButtonClicked", function () {
-        btn1.style.visibility = "hidden"
-        btn2.style.visibility = "hidden"
-        btn3.style.visibility = "hidden"
-        btn4.style.visibility = "hidden"
-        btn5.style.visibility = "hidden"
-        btn6.style.visibility = "hidden"
-        add1.style.visibility = "hidden"
-        sub1.style.visibility = "hidden"
+        shop.style.visibility = "hidden"
+        shoppingCart.style.visibility = "visible"
     })
 
     btnsubmit.addEventListener("click", function(){
